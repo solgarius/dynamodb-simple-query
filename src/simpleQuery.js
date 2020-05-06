@@ -10,7 +10,8 @@ import {
   getVersionKey,
   getTTLKey,
   getReverseIndexName,
-  getTable
+  getTable,
+  setTableConfig as configSetTableConfig
 } from './config'
 import { getError, CODE } from './error'
 
@@ -21,6 +22,10 @@ const MAX_DYNAMO_BATCH_SIZE = 25
 const NEW_DATA_STRUCTURE = true
 
 // <editor-fold desc="Public Functions">
+export function setTableConfig (...args) {
+  return configSetTableConfig(...args)
+}
+
 export function getId () {
   return getUID(ID_LENGTH)
 }

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A simple wrapper tool for performing queries in dynamodb with a limited mongodb like syntax",
   "main": "dist/main.js",
+  "module": "src/simpleQuery.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "test": "jest --collectCoverage"

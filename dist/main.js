@@ -1,4 +1,14 @@
-/******/ (function(modules) { // webpackBootstrap
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["dynamo-simple-query"] = factory();
+	else
+		root["dynamoSimpleQuery"] = factory();
+})(this, function() {
+return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
 /******/
@@ -173,20 +183,20 @@ module.exports = require("aws-sdk");
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "setTableConfig", function() { return /* reexport */ setTableConfig; });
-__webpack_require__.d(__webpack_exports__, "ID_LENGTH", function() { return /* reexport */ ID_LENGTH; });
-__webpack_require__.d(__webpack_exports__, "getId", function() { return /* reexport */ getId; });
-__webpack_require__.d(__webpack_exports__, "getOneDocument", function() { return /* reexport */ getOneDocument; });
-__webpack_require__.d(__webpack_exports__, "getDocuments", function() { return /* reexport */ getDocuments; });
-__webpack_require__.d(__webpack_exports__, "createDocument", function() { return /* reexport */ createDocument; });
-__webpack_require__.d(__webpack_exports__, "updateDocument", function() { return /* reexport */ updateDocument; });
-__webpack_require__.d(__webpack_exports__, "upsertDocument", function() { return /* reexport */ upsertDocument; });
-__webpack_require__.d(__webpack_exports__, "removeDocument", function() { return /* reexport */ removeDocument; });
-__webpack_require__.d(__webpack_exports__, "removeManyDocuments", function() { return /* reexport */ removeManyDocuments; });
-__webpack_require__.d(__webpack_exports__, "batchGetDocuments", function() { return /* reexport */ batchGetDocuments; });
-__webpack_require__.d(__webpack_exports__, "batchUpdateDocuments", function() { return /* reexport */ batchUpdateDocuments; });
-__webpack_require__.d(__webpack_exports__, "batchWriteDocuments", function() { return /* reexport */ batchWriteDocuments; });
-__webpack_require__.d(__webpack_exports__, "rawBatchWrite", function() { return /* reexport */ rawBatchWrite; });
+__webpack_require__.d(__webpack_exports__, "ID_LENGTH", function() { return /* binding */ ID_LENGTH; });
+__webpack_require__.d(__webpack_exports__, "setTableConfig", function() { return /* binding */ simpleQuery_setTableConfig; });
+__webpack_require__.d(__webpack_exports__, "getId", function() { return /* binding */ getId; });
+__webpack_require__.d(__webpack_exports__, "getOneDocument", function() { return /* binding */ getOneDocument; });
+__webpack_require__.d(__webpack_exports__, "getDocuments", function() { return /* binding */ getDocuments; });
+__webpack_require__.d(__webpack_exports__, "createDocument", function() { return /* binding */ createDocument; });
+__webpack_require__.d(__webpack_exports__, "batchUpdateDocuments", function() { return /* binding */ batchUpdateDocuments; });
+__webpack_require__.d(__webpack_exports__, "updateDocument", function() { return /* binding */ updateDocument; });
+__webpack_require__.d(__webpack_exports__, "upsertDocument", function() { return /* binding */ upsertDocument; });
+__webpack_require__.d(__webpack_exports__, "removeDocument", function() { return /* binding */ removeDocument; });
+__webpack_require__.d(__webpack_exports__, "removeManyDocuments", function() { return /* binding */ removeManyDocuments; });
+__webpack_require__.d(__webpack_exports__, "batchGetDocuments", function() { return /* binding */ batchGetDocuments; });
+__webpack_require__.d(__webpack_exports__, "batchWriteDocuments", function() { return /* binding */ batchWriteDocuments; });
+__webpack_require__.d(__webpack_exports__, "rawBatchWrite", function() { return /* binding */ rawBatchWrite; });
 
 // EXTERNAL MODULE: external "util"
 var external_util_ = __webpack_require__(1);
@@ -646,7 +656,7 @@ function getTypePath (type, path) {
 
 const DBClient = ddb
 
-// CONCATENATED MODULE: ./src/orm.js
+// CONCATENATED MODULE: ./src/simpleQuery.js
 
 
 
@@ -662,6 +672,10 @@ const MAX_DYNAMO_BATCH_SIZE = 25
 const NEW_DATA_STRUCTURE = true
 
 // <editor-fold desc="Public Functions">
+function simpleQuery_setTableConfig (...args) {
+  return setTableConfig(...args)
+}
+
 function getId () {
   return getUID(ID_LENGTH)
 }
@@ -1201,13 +1215,7 @@ function deepExtend (origItem, newItem, ignoreKeys = []) {
 
 // </editor-fold>
 
-// CONCATENATED MODULE: ./src/index.js
-
-
-
-
-
-
 
 /***/ })
 /******/ ]);
+});
