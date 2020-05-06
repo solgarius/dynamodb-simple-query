@@ -18,7 +18,10 @@ aws object (todo in future), so regions etc would need to be registered via envi
 
 ### Install 
 ```
-npm i dynamodb-simple-query
+$ npm i dynamodb-simple-query
+```
+```
+$ yarn add dynamodb-simple-query
 ```
 
 ### Use
